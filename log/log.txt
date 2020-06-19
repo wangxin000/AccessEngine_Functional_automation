@@ -1,0 +1,545 @@
+
+[2018-09-13 10:48:34] INFO [<module>: run_all.py, 5] ================================== ²âÊÔ¿ªÊ¼ ==================================
+[2018-09-13 10:48:34] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 115.28.108.130:5000
+[2018-09-13 10:48:34] DEBUG [_make_request: connectionpool.py, 393] http://115.28.108.130:5000 "POST /api/user/login/ HTTP/1.1" 200 21
+[2018-09-13 10:48:34] INFO [log_case_info: case_log.py, 8] ²âÊÔÓÃÀı£ºtest_user_login_normal
+[2018-09-13 10:48:34] INFO [log_case_info: case_log.py, 9] url£ºhttp://115.28.108.130:5000/api/user/login/
+[2018-09-13 10:48:34] INFO [log_case_info: case_log.py, 10] ÇëÇó²ÎÊı£º{"name": "ÕÅÈı","password":"123456"}
+[2018-09-13 10:48:34] INFO [log_case_info: case_log.py, 11] ÆÚÍû½á¹û£º<h1>µÇÂ¼³É¹¦</h1>
+[2018-09-13 10:48:34] INFO [log_case_info: case_log.py, 12] Êµ¼Ê½á¹û£º<h1>µÇÂ¼³É¹¦</h1>
+[2018-09-13 10:48:34] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 115.28.108.130:5000
+[2018-09-13 10:48:34] DEBUG [_make_request: connectionpool.py, 393] http://115.28.108.130:5000 "POST /api/user/login/ HTTP/1.1" 200 42
+[2018-09-13 10:48:34] INFO [log_case_info: case_log.py, 8] ²âÊÔÓÃÀı£ºtest_user_login_password_wrong
+[2018-09-13 10:48:34] INFO [log_case_info: case_log.py, 9] url£ºhttp://115.28.108.130:5000/api/user/login/
+[2018-09-13 10:48:34] INFO [log_case_info: case_log.py, 10] ÇëÇó²ÎÊı£º{"name": "ÕÅÈı","password":"1234567"}
+[2018-09-13 10:48:34] INFO [log_case_info: case_log.py, 11] ÆÚÍû½á¹û£º<h1>Ê§°Ü£¬ÓÃ»§Ãû»òÃÜÂë´íÎó</h1>
+[2018-09-13 10:48:34] INFO [log_case_info: case_log.py, 12] Êµ¼Ê½á¹û£º<h1>Ê§°Ü£¬ÓÃ»§Ãû»òÃÜÂë´íÎó</h1>
+[2018-09-13 10:48:34] DEBUG [query_db: db.py, 18] select * from user where name = 'ÕÅÈı'
+[2018-09-13 10:48:34] DEBUG [query_db: db.py, 24] ((2, 'ÕÅÈı', 'e10adc3949ba59abbe56e057f20f883e'),)
+[2018-09-13 10:48:34] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 115.28.108.130:5000
+[2018-09-13 10:48:34] DEBUG [_make_request: connectionpool.py, 393] http://115.28.108.130:5000 "POST /api/user/reg/ HTTP/1.1" 200 152
+[2018-09-13 10:48:34] INFO [log_case_info: case_log.py, 8] ²âÊÔÓÃÀı£ºtest_user_reg_exist
+[2018-09-13 10:48:34] INFO [log_case_info: case_log.py, 9] url£ºhttp://115.28.108.130:5000/api/user/reg/
+[2018-09-13 10:48:34] INFO [log_case_info: case_log.py, 10] ÇëÇó²ÎÊı£º{"name": "ÕÅÈı", "password": "123456"}
+[2018-09-13 10:48:34] INFO [log_case_info: case_log.py, 11] ÆÚÍû½á¹û£º{'code': '100001', 'msg': 'Ê§°Ü£¬ÓÃ»§ÒÑ´æÔÚ', 'data': {'name': 'ÕÅÈı', 'password': 'e10adc3949ba59abbe56e057f20f883e'}}
+[2018-09-13 10:48:34] INFO [log_case_info: case_log.py, 12] Êµ¼Ê½á¹û£º{"code": "100001", "data": {"name": "ÕÅÈı", "password": "e10adc3949ba59abbe56e057f20f883e"}, "msg": "Ê§°Ü£¬ÓÃ»§ÒÑ´æÔÚ"}
+[2018-09-13 10:48:34] DEBUG [query_db: db.py, 18] select * from user where name = '·¶±ù±ù'
+[2018-09-13 10:48:34] DEBUG [query_db: db.py, 24] ()
+[2018-09-13 10:48:34] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 115.28.108.130:5000
+[2018-09-13 10:48:34] DEBUG [_make_request: connectionpool.py, 393] http://115.28.108.130:5000 "POST /api/user/reg/ HTTP/1.1" 200 122
+[2018-09-13 10:48:34] INFO [log_case_info: case_log.py, 8] ²âÊÔÓÃÀı£ºtest_user_reg_normal
+[2018-09-13 10:48:34] INFO [log_case_info: case_log.py, 9] url£ºhttp://115.28.108.130:5000/api/user/reg/
+[2018-09-13 10:48:34] INFO [log_case_info: case_log.py, 10] ÇëÇó²ÎÊı£º{"name": "·¶±ù±ù", "password": "123456"}
+[2018-09-13 10:48:34] INFO [log_case_info: case_log.py, 11] ÆÚÍû½á¹û£º{'code': '100000', 'msg': '³É¹¦', 'data': {'name': '·¶±ù±ù', 'password': 'e10adc3949ba59abbe56e057f20f883e'}}
+[2018-09-13 10:48:34] INFO [log_case_info: case_log.py, 12] Êµ¼Ê½á¹û£º{"code": "100000", "data": {"name": "·¶±ù±ù", "password": "e10adc3949ba59abbe56e057f20f883e"}, "msg": "³É¹¦"}
+[2018-09-13 10:48:34] DEBUG [query_db: db.py, 18] select * from user where name = '·¶±ù±ù'
+[2018-09-13 10:48:34] DEBUG [query_db: db.py, 24] ((25, '·¶±ù±ù', 'e10adc3949ba59abbe56e057f20f883e'),)
+[2018-09-13 10:48:34] DEBUG [change_db: db.py, 32] delete from user where name='·¶±ù±ù'
+[2018-09-13 10:48:35] INFO [<module>: run_all.py, 11] ================================== ²âÊÔ½áÊø ==================================
+[2018-09-13 11:58:31] INFO [<module>: run_all.py, 6] ================================== ²âÊÔ¿ªÊ¼ ==================================
+[2018-09-13 11:58:31] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 115.28.108.130:5000
+[2018-09-13 11:58:31] DEBUG [_make_request: connectionpool.py, 393] http://115.28.108.130:5000 "POST /api/user/login/ HTTP/1.1" 200 21
+[2018-09-13 11:58:31] INFO [log_case_info: case_log.py, 8] ²âÊÔÓÃÀı£ºtest_user_login_normal
+[2018-09-13 11:58:31] INFO [log_case_info: case_log.py, 9] url£ºhttp://115.28.108.130:5000/api/user/login/
+[2018-09-13 11:58:31] INFO [log_case_info: case_log.py, 10] ÇëÇó²ÎÊı£º{"name": "ÕÅÈı","password":"123456"}
+[2018-09-13 11:58:31] INFO [log_case_info: case_log.py, 11] ÆÚÍû½á¹û£º<h1>µÇÂ¼³É¹¦</h1>
+[2018-09-13 11:58:31] INFO [log_case_info: case_log.py, 12] Êµ¼Ê½á¹û£º<h1>µÇÂ¼³É¹¦</h1>
+[2018-09-13 11:58:31] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 115.28.108.130:5000
+[2018-09-13 11:58:31] DEBUG [_make_request: connectionpool.py, 393] http://115.28.108.130:5000 "POST /api/user/login/ HTTP/1.1" 200 42
+[2018-09-13 11:58:31] INFO [log_case_info: case_log.py, 8] ²âÊÔÓÃÀı£ºtest_user_login_password_wrong
+[2018-09-13 11:58:31] INFO [log_case_info: case_log.py, 9] url£ºhttp://115.28.108.130:5000/api/user/login/
+[2018-09-13 11:58:31] INFO [log_case_info: case_log.py, 10] ÇëÇó²ÎÊı£º{"name": "ÕÅÈı","password":"1234567"}
+[2018-09-13 11:58:31] INFO [log_case_info: case_log.py, 11] ÆÚÍû½á¹û£º<h1>Ê§°Ü£¬ÓÃ»§Ãû»òÃÜÂë´íÎó</h1>
+[2018-09-13 11:58:31] INFO [log_case_info: case_log.py, 12] Êµ¼Ê½á¹û£º<h1>Ê§°Ü£¬ÓÃ»§Ãû»òÃÜÂë´íÎó</h1>
+[2018-09-13 11:58:31] DEBUG [query_db: db.py, 18] select * from user where name = 'ÕÅÈı'
+[2018-09-13 11:58:31] DEBUG [query_db: db.py, 24] ((2, 'ÕÅÈı', 'e10adc3949ba59abbe56e057f20f883e'),)
+[2018-09-13 11:58:31] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 115.28.108.130:5000
+[2018-09-13 11:58:31] DEBUG [_make_request: connectionpool.py, 393] http://115.28.108.130:5000 "POST /api/user/reg/ HTTP/1.1" 200 152
+[2018-09-13 11:58:31] INFO [log_case_info: case_log.py, 8] ²âÊÔÓÃÀı£ºtest_user_reg_exist
+[2018-09-13 11:58:31] INFO [log_case_info: case_log.py, 9] url£ºhttp://115.28.108.130:5000/api/user/reg/
+[2018-09-13 11:58:31] INFO [log_case_info: case_log.py, 10] ÇëÇó²ÎÊı£º{"name": "ÕÅÈı", "password": "123456"}
+[2018-09-13 11:58:31] INFO [log_case_info: case_log.py, 11] ÆÚÍû½á¹û£º{'code': '100001', 'msg': 'Ê§°Ü£¬ÓÃ»§ÒÑ´æÔÚ', 'data': {'name': 'ÕÅÈı', 'password': 'e10adc3949ba59abbe56e057f20f883e'}}
+[2018-09-13 11:58:31] INFO [log_case_info: case_log.py, 12] Êµ¼Ê½á¹û£º{"code": "100001", "data": {"name": "ÕÅÈı", "password": "e10adc3949ba59abbe56e057f20f883e"}, "msg": "Ê§°Ü£¬ÓÃ»§ÒÑ´æÔÚ"}
+[2018-09-13 11:58:31] DEBUG [query_db: db.py, 18] select * from user where name = '·¶±ù±ù'
+[2018-09-13 11:58:31] DEBUG [query_db: db.py, 24] ()
+[2018-09-13 11:58:31] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 115.28.108.130:5000
+[2018-09-13 11:58:31] DEBUG [_make_request: connectionpool.py, 393] http://115.28.108.130:5000 "POST /api/user/reg/ HTTP/1.1" 200 122
+[2018-09-13 11:58:31] INFO [log_case_info: case_log.py, 8] ²âÊÔÓÃÀı£ºtest_user_reg_normal
+[2018-09-13 11:58:31] INFO [log_case_info: case_log.py, 9] url£ºhttp://115.28.108.130:5000/api/user/reg/
+[2018-09-13 11:58:31] INFO [log_case_info: case_log.py, 10] ÇëÇó²ÎÊı£º{"name": "·¶±ù±ù", "password": "123456"}
+[2018-09-13 11:58:31] INFO [log_case_info: case_log.py, 11] ÆÚÍû½á¹û£º{'code': '100000', 'msg': '³É¹¦', 'data': {'name': '·¶±ù±ù', 'password': 'e10adc3949ba59abbe56e057f20f883e'}}
+[2018-09-13 11:58:31] INFO [log_case_info: case_log.py, 12] Êµ¼Ê½á¹û£º{"code": "100000", "data": {"name": "·¶±ù±ù", "password": "e10adc3949ba59abbe56e057f20f883e"}, "msg": "³É¹¦"}
+[2018-09-13 11:58:31] DEBUG [query_db: db.py, 18] select * from user where name = '·¶±ù±ù'
+[2018-09-13 11:58:31] DEBUG [query_db: db.py, 24] ((26, '·¶±ù±ù', 'e10adc3949ba59abbe56e057f20f883e'),)
+[2018-09-13 11:58:31] DEBUG [change_db: db.py, 32] delete from user where name='·¶±ù±ù'
+[2018-09-13 11:58:33] INFO [send_email: send_email.py, 43] ÓÊ¼ş·¢ËÍÍê³É£¡
+[2018-09-13 11:58:33] INFO [<module>: run_all.py, 13] ================================== ²âÊÔ½áÊø ==================================
+[2018-09-13 12:19:43] INFO [<module>: run_all.py, 6] ================================== ²âÊÔ¿ªÊ¼ ==================================
+[2018-09-13 12:19:43] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 115.28.108.130:5000
+[2018-09-13 12:19:43] DEBUG [_make_request: connectionpool.py, 393] http://115.28.108.130:5000 "POST /api/user/login/ HTTP/1.1" 200 21
+[2018-09-13 12:19:43] INFO [log_case_info: case_log.py, 8] ²âÊÔÓÃÀı£ºtest_user_login_normal
+[2018-09-13 12:19:43] INFO [log_case_info: case_log.py, 9] url£ºhttp://115.28.108.130:5000/api/user/login/
+[2018-09-13 12:19:43] INFO [log_case_info: case_log.py, 10] ÇëÇó²ÎÊı£º{"name": "ÕÅÈı","password":"123456"}
+[2018-09-13 12:19:43] INFO [log_case_info: case_log.py, 11] ÆÚÍû½á¹û£º<h1>µÇÂ¼³É¹¦</h1>
+[2018-09-13 12:19:43] INFO [log_case_info: case_log.py, 12] Êµ¼Ê½á¹û£º<h1>µÇÂ¼³É¹¦</h1>
+[2018-09-13 12:19:43] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 115.28.108.130:5000
+[2018-09-13 12:19:43] DEBUG [_make_request: connectionpool.py, 393] http://115.28.108.130:5000 "POST /api/user/login/ HTTP/1.1" 200 42
+[2018-09-13 12:19:43] INFO [log_case_info: case_log.py, 8] ²âÊÔÓÃÀı£ºtest_user_login_password_wrong
+[2018-09-13 12:19:43] INFO [log_case_info: case_log.py, 9] url£ºhttp://115.28.108.130:5000/api/user/login/
+[2018-09-13 12:19:43] INFO [log_case_info: case_log.py, 10] ÇëÇó²ÎÊı£º{"name": "ÕÅÈı","password":"1234567"}
+[2018-09-13 12:19:43] INFO [log_case_info: case_log.py, 11] ÆÚÍû½á¹û£º<h1>Ê§°Ü£¬ÓÃ»§Ãû»òÃÜÂë´íÎó</h1>
+[2018-09-13 12:19:43] INFO [log_case_info: case_log.py, 12] Êµ¼Ê½á¹û£º<h1>Ê§°Ü£¬ÓÃ»§Ãû»òÃÜÂë´íÎó</h1>
+[2018-09-13 12:19:43] DEBUG [query_db: db.py, 19] select * from user where name = 'ÕÅÈı'
+[2018-09-13 12:19:44] DEBUG [query_db: db.py, 25] ((2, 'ÕÅÈı', 'e10adc3949ba59abbe56e057f20f883e'),)
+[2018-09-13 12:19:44] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 115.28.108.130:5000
+[2018-09-13 12:19:44] DEBUG [_make_request: connectionpool.py, 393] http://115.28.108.130:5000 "POST /api/user/reg/ HTTP/1.1" 200 152
+[2018-09-13 12:19:44] INFO [log_case_info: case_log.py, 8] ²âÊÔÓÃÀı£ºtest_user_reg_exist
+[2018-09-13 12:19:44] INFO [log_case_info: case_log.py, 9] url£ºhttp://115.28.108.130:5000/api/user/reg/
+[2018-09-13 12:19:44] INFO [log_case_info: case_log.py, 10] ÇëÇó²ÎÊı£º{"name": "ÕÅÈı", "password": "123456"}
+[2018-09-13 12:19:44] INFO [log_case_info: case_log.py, 11] ÆÚÍû½á¹û£º{'code': '100001', 'msg': 'Ê§°Ü£¬ÓÃ»§ÒÑ´æÔÚ', 'data': {'name': 'ÕÅÈı', 'password': 'e10adc3949ba59abbe56e057f20f883e'}}
+[2018-09-13 12:19:44] INFO [log_case_info: case_log.py, 12] Êµ¼Ê½á¹û£º{"code": "100001", "data": {"name": "ÕÅÈı", "password": "e10adc3949ba59abbe56e057f20f883e"}, "msg": "Ê§°Ü£¬ÓÃ»§ÒÑ´æÔÚ"}
+[2018-09-13 12:19:44] DEBUG [query_db: db.py, 19] select * from user where name = '·¶±ù±ù'
+[2018-09-13 12:19:44] DEBUG [query_db: db.py, 25] ()
+[2018-09-13 12:19:44] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 115.28.108.130:5000
+[2018-09-13 12:19:44] DEBUG [_make_request: connectionpool.py, 393] http://115.28.108.130:5000 "POST /api/user/reg/ HTTP/1.1" 200 122
+[2018-09-13 12:19:44] INFO [log_case_info: case_log.py, 8] ²âÊÔÓÃÀı£ºtest_user_reg_normal
+[2018-09-13 12:19:44] INFO [log_case_info: case_log.py, 9] url£ºhttp://115.28.108.130:5000/api/user/reg/
+[2018-09-13 12:19:44] INFO [log_case_info: case_log.py, 10] ÇëÇó²ÎÊı£º{"name": "·¶±ù±ù", "password": "123456"}
+[2018-09-13 12:19:44] INFO [log_case_info: case_log.py, 11] ÆÚÍû½á¹û£º{'code': '100000', 'msg': '³É¹¦', 'data': {'name': '·¶±ù±ù', 'password': 'e10adc3949ba59abbe56e057f20f883e'}}
+[2018-09-13 12:19:44] INFO [log_case_info: case_log.py, 12] Êµ¼Ê½á¹û£º{"code": "100000", "data": {"name": "·¶±ù±ù", "password": "e10adc3949ba59abbe56e057f20f883e"}, "msg": "³É¹¦"}
+[2018-09-13 12:19:44] DEBUG [query_db: db.py, 19] select * from user where name = '·¶±ù±ù'
+[2018-09-13 12:19:44] DEBUG [query_db: db.py, 25] ((28, '·¶±ù±ù', 'e10adc3949ba59abbe56e057f20f883e'),)
+[2018-09-13 12:19:44] DEBUG [change_db: db.py, 33] delete from user where name='·¶±ù±ù'
+[2018-09-13 12:19:49] INFO [send_email: send_email.py, 42] ÓÊ¼ş·¢ËÍÍê³É£¡
+[2018-09-13 12:19:49] INFO [<module>: run_all.py, 13] ================================== ²âÊÔ½áÊø ==================================
+[2018-09-13 13:06:48] INFO [<module>: run_all.py, 6] ================================== ²âÊÔ¿ªÊ¼ ==================================
+[2018-09-13 13:07:01] INFO [<module>: run_all.py, 6] ================================== ²âÊÔ¿ªÊ¼ ==================================
+[2018-09-13 13:08:18] INFO [<module>: run_all.py, 6] ================================== ²âÊÔ¿ªÊ¼ ==================================
+[2018-09-13 13:08:20] INFO [send_email: send_email.py, 44] ÓÊ¼ş·¢ËÍÍê³É£¡
+[2018-09-13 13:08:20] INFO [<module>: run_all.py, 13] ================================== ²âÊÔ½áÊø ==================================
+[2018-09-13 13:09:17] INFO [<module>: run_all.py, 6] ================================== ²âÊÔ¿ªÊ¼ ==================================
+[2018-09-13 13:09:52] INFO [<module>: run_all.py, 6] ================================== ²âÊÔ¿ªÊ¼ ==================================
+[2018-09-13 13:10:56] INFO [<module>: run_all.py, 6] ================================== ²âÊÔ¿ªÊ¼ ==================================
+[2018-09-13 13:14:27] INFO [<module>: run_all.py, 6] ================================== ²âÊÔ¿ªÊ¼ ==================================
+[2018-09-13 13:14:27] ERROR [test_user_login_normal: test_user_login.py, 20] ÓÃÀıÊı¾İ²»´æÔÚ
+[2018-09-13 13:14:27] ERROR [test_user_login_password_wrong: test_user_login.py, 33] ÓÃÀıÊı¾İ²»´æÔÚ
+[2018-09-13 13:14:27] DEBUG [query_db: db.py, 21] select * from user where name = 'ÕÅÈı'
+[2018-09-13 13:14:27] DEBUG [query_db: db.py, 27] ((2, 'ÕÅÈı', 'e10adc3949ba59abbe56e057f20f883e'),)
+[2018-09-13 13:14:27] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 115.28.108.130:5000
+[2018-09-13 13:14:28] DEBUG [_make_request: connectionpool.py, 393] http://115.28.108.130:5000 "POST /api/user/reg/ HTTP/1.1" 200 152
+[2018-09-13 13:14:28] INFO [log_case_info: case_log.py, 10] ²âÊÔÓÃÀı£ºtest_user_reg_exist
+[2018-09-13 13:14:28] INFO [log_case_info: case_log.py, 11] url£ºhttp://115.28.108.130:5000/api/user/reg/
+[2018-09-13 13:14:28] INFO [log_case_info: case_log.py, 12] ÇëÇó²ÎÊı£º{"name": "ÕÅÈı", "password": "123456"}
+[2018-09-13 13:14:28] INFO [log_case_info: case_log.py, 13] ÆÚÍû½á¹û£º{'code': '100001', 'msg': 'Ê§°Ü£¬ÓÃ»§ÒÑ´æÔÚ', 'data': {'name': 'ÕÅÈı', 'password': 'e10adc3949ba59abbe56e057f20f883e'}}
+[2018-09-13 13:14:28] INFO [log_case_info: case_log.py, 14] Êµ¼Ê½á¹û£º{"code": "100001", "data": {"name": "ÕÅÈı", "password": "e10adc3949ba59abbe56e057f20f883e"}, "msg": "Ê§°Ü£¬ÓÃ»§ÒÑ´æÔÚ"}
+[2018-09-13 13:14:28] DEBUG [query_db: db.py, 21] select * from user where name = '·¶±ù±ù'
+[2018-09-13 13:14:28] DEBUG [query_db: db.py, 27] ()
+[2018-09-13 13:14:28] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 115.28.108.130:5000
+[2018-09-13 13:14:28] DEBUG [_make_request: connectionpool.py, 393] http://115.28.108.130:5000 "POST /api/user/reg/ HTTP/1.1" 200 122
+[2018-09-13 13:14:28] INFO [log_case_info: case_log.py, 10] ²âÊÔÓÃÀı£ºtest_user_reg_normal
+[2018-09-13 13:14:28] INFO [log_case_info: case_log.py, 11] url£ºhttp://115.28.108.130:5000/api/user/reg/
+[2018-09-13 13:14:28] INFO [log_case_info: case_log.py, 12] ÇëÇó²ÎÊı£º{"name": "·¶±ù±ù", "password": "123456"}
+[2018-09-13 13:14:28] INFO [log_case_info: case_log.py, 13] ÆÚÍû½á¹û£º{'code': '100000', 'msg': '³É¹¦', 'data': {'name': '·¶±ù±ù', 'password': 'e10adc3949ba59abbe56e057f20f883e'}}
+[2018-09-13 13:14:28] INFO [log_case_info: case_log.py, 14] Êµ¼Ê½á¹û£º{"code": "100000", "data": {"name": "·¶±ù±ù", "password": "e10adc3949ba59abbe56e057f20f883e"}, "msg": "³É¹¦"}
+[2018-09-13 13:14:28] DEBUG [query_db: db.py, 21] select * from user where name = '·¶±ù±ù'
+[2018-09-13 13:14:28] DEBUG [query_db: db.py, 27] ((29, '·¶±ù±ù', 'e10adc3949ba59abbe56e057f20f883e'),)
+[2018-09-13 13:14:28] DEBUG [change_db: db.py, 35] delete from user where name='·¶±ù±ù'
+[2018-09-13 13:14:29] INFO [send_email: send_email.py, 44] ÓÊ¼ş·¢ËÍÍê³É£¡
+[2018-09-13 13:14:29] INFO [<module>: run_all.py, 14] ================================== ²âÊÔ½áÊø ==================================
+[2018-09-13 13:16:59] INFO [<module>: run_all.py, 6] ================================== ²âÊÔ¿ªÊ¼ ==================================
+[2018-09-13 13:16:59] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 115.28.108.130:5000
+[2018-09-13 13:16:59] DEBUG [_make_request: connectionpool.py, 393] http://115.28.108.130:5000 "POST /api/user/login/ HTTP/1.1" 200 21
+[2018-09-13 13:16:59] INFO [log_case_info: case_log.py, 10] ²âÊÔÓÃÀı£ºtest_user_login_normal
+[2018-09-13 13:16:59] INFO [log_case_info: case_log.py, 11] url£ºhttp://115.28.108.130:5000/api/user/login/
+[2018-09-13 13:16:59] INFO [log_case_info: case_log.py, 12] ÇëÇó²ÎÊı£º{"name": "ÕÅÈı","password":"123456"}
+[2018-09-13 13:16:59] INFO [log_case_info: case_log.py, 13] ÆÚÍû½á¹û£º<h1>µÇÂ¼³É¹¦</h1>
+[2018-09-13 13:16:59] INFO [log_case_info: case_log.py, 14] Êµ¼Ê½á¹û£º<h1>µÇÂ¼³É¹¦</h1>
+[2018-09-13 13:16:59] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 115.28.108.130:5000
+[2018-09-13 13:16:59] DEBUG [_make_request: connectionpool.py, 393] http://115.28.108.130:5000 "POST /api/user/login/ HTTP/1.1" 200 42
+[2018-09-13 13:16:59] INFO [log_case_info: case_log.py, 10] ²âÊÔÓÃÀı£ºtest_user_login_password_wrong
+[2018-09-13 13:16:59] INFO [log_case_info: case_log.py, 11] url£ºhttp://115.28.108.130:5000/api/user/login/
+[2018-09-13 13:16:59] INFO [log_case_info: case_log.py, 12] ÇëÇó²ÎÊı£º{"name": "ÕÅÈı","password":"1234567"}
+[2018-09-13 13:16:59] INFO [log_case_info: case_log.py, 13] ÆÚÍû½á¹û£º<h1>Ê§°Ü£¬ÓÃ»§Ãû»òÃÜÂë´íÎó</h1>
+[2018-09-13 13:16:59] INFO [log_case_info: case_log.py, 14] Êµ¼Ê½á¹û£º<h1>Ê§°Ü£¬ÓÃ»§Ãû»òÃÜÂë´íÎó</h1>
+[2018-09-13 13:16:59] DEBUG [query_db: db.py, 21] select * from user where name = 'ÕÅÈı'
+[2018-09-13 13:16:59] DEBUG [query_db: db.py, 27] ((2, 'ÕÅÈı', 'e10adc3949ba59abbe56e057f20f883e'),)
+[2018-09-13 13:16:59] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 115.28.108.130:5000
+[2018-09-13 13:17:00] DEBUG [_make_request: connectionpool.py, 393] http://115.28.108.130:5000 "POST /api/user/reg/ HTTP/1.1" 200 152
+[2018-09-13 13:17:00] INFO [log_case_info: case_log.py, 10] ²âÊÔÓÃÀı£ºtest_user_reg_exist
+[2018-09-13 13:17:00] INFO [log_case_info: case_log.py, 11] url£ºhttp://115.28.108.130:5000/api/user/reg/
+[2018-09-13 13:17:00] INFO [log_case_info: case_log.py, 12] ÇëÇó²ÎÊı£º{"name": "ÕÅÈı", "password": "123456"}
+[2018-09-13 13:17:00] INFO [log_case_info: case_log.py, 13] ÆÚÍû½á¹û£º{'code': '100001', 'msg': 'Ê§°Ü£¬ÓÃ»§ÒÑ´æÔÚ', 'data': {'name': 'ÕÅÈı', 'password': 'e10adc3949ba59abbe56e057f20f883e'}}
+[2018-09-13 13:17:00] INFO [log_case_info: case_log.py, 14] Êµ¼Ê½á¹û£º{"code": "100001", "data": {"name": "ÕÅÈı", "password": "e10adc3949ba59abbe56e057f20f883e"}, "msg": "Ê§°Ü£¬ÓÃ»§ÒÑ´æÔÚ"}
+[2018-09-13 13:17:00] DEBUG [query_db: db.py, 21] select * from user where name = '·¶±ù±ù'
+[2018-09-13 13:17:00] DEBUG [query_db: db.py, 27] ()
+[2018-09-13 13:17:00] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 115.28.108.130:5000
+[2018-09-13 13:17:00] DEBUG [_make_request: connectionpool.py, 393] http://115.28.108.130:5000 "POST /api/user/reg/ HTTP/1.1" 200 122
+[2018-09-13 13:17:00] INFO [log_case_info: case_log.py, 10] ²âÊÔÓÃÀı£ºtest_user_reg_normal
+[2018-09-13 13:17:00] INFO [log_case_info: case_log.py, 11] url£ºhttp://115.28.108.130:5000/api/user/reg/
+[2018-09-13 13:17:00] INFO [log_case_info: case_log.py, 12] ÇëÇó²ÎÊı£º{"name": "·¶±ù±ù", "password": "123456"}
+[2018-09-13 13:17:00] INFO [log_case_info: case_log.py, 13] ÆÚÍû½á¹û£º{'code': '100000', 'msg': '³É¹¦', 'data': {'name': '·¶±ù±ù', 'password': 'e10adc3949ba59abbe56e057f20f883e'}}
+[2018-09-13 13:17:00] INFO [log_case_info: case_log.py, 14] Êµ¼Ê½á¹û£º{"code": "100000", "data": {"name": "·¶±ù±ù", "password": "e10adc3949ba59abbe56e057f20f883e"}, "msg": "³É¹¦"}
+[2018-09-13 13:17:00] DEBUG [query_db: db.py, 21] select * from user where name = '·¶±ù±ù'
+[2018-09-13 13:17:00] DEBUG [query_db: db.py, 27] ((30, '·¶±ù±ù', 'e10adc3949ba59abbe56e057f20f883e'),)
+[2018-09-13 13:17:00] DEBUG [change_db: db.py, 35] delete from user where name='·¶±ù±ù'
+[2018-09-13 13:17:01] INFO [send_email: send_email.py, 44] ÓÊ¼ş·¢ËÍÍê³É£¡
+[2018-09-13 13:17:01] INFO [<module>: run_all.py, 13] ================================== ²âÊÔ½áÊø ==================================
+[2020-06-04 16:27:04] INFO [<module>: run_all.py, 6] ================================== ²âÊÔ¿ªÊ¼ ==================================
+[2020-06-04 16:27:05] ERROR [send_email: send_email.py, 46] (535, b'5.7.8 authentication failed')
+[2020-06-04 16:27:06] INFO [<module>: run_all.py, 13] ================================== ²âÊÔ½áÊø ==================================
+[2020-06-04 16:55:33] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 115.28.108.130:5000
+[2020-06-04 16:55:33] DEBUG [_make_request: connectionpool.py, 393] http://115.28.108.130:5000 "POST /api/user/login/ HTTP/1.1" 200 21
+[2020-06-04 16:55:33] INFO [log_case_info: case_log.py, 12] æµ‹è¯•ç”¨ä¾‹ï¼štest_user_login_normal
+[2020-06-04 16:55:33] INFO [log_case_info: case_log.py, 13] urlï¼šhttp://115.28.108.130:5000/api/user/login/
+[2020-06-04 16:55:33] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 115.28.108.130:5000
+[2020-06-04 16:55:33] DEBUG [_make_request: connectionpool.py, 393] http://115.28.108.130:5000 "POST /api/user/login/ HTTP/1.1" 200 42
+[2020-06-04 16:55:33] INFO [log_case_info: case_log.py, 12] æµ‹è¯•ç”¨ä¾‹ï¼štest_user_login_password_wrong
+[2020-06-04 16:55:33] INFO [log_case_info: case_log.py, 13] urlï¼šhttp://115.28.108.130:5000/api/user/login/
+[2020-06-04 16:55:46] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 115.28.108.130:5000
+[2020-06-04 16:55:46] DEBUG [_make_request: connectionpool.py, 393] http://115.28.108.130:5000 "POST /api/user/login/ HTTP/1.1" 200 21
+[2020-06-04 16:55:46] INFO [log_case_info: case_log.py, 12] æµ‹è¯•ç”¨ä¾‹ï¼štest_user_login_normal
+[2020-06-04 16:55:46] INFO [log_case_info: case_log.py, 13] urlï¼šhttp://115.28.108.130:5000/api/user/login/
+[2020-06-04 16:55:46] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 115.28.108.130:5000
+[2020-06-04 16:55:46] DEBUG [_make_request: connectionpool.py, 393] http://115.28.108.130:5000 "POST /api/user/login/ HTTP/1.1" 200 42
+[2020-06-04 16:55:46] INFO [log_case_info: case_log.py, 12] æµ‹è¯•ç”¨ä¾‹ï¼štest_user_login_password_wrong
+[2020-06-04 16:55:46] INFO [log_case_info: case_log.py, 13] urlï¼šhttp://115.28.108.130:5000/api/user/login/
+[2020-06-04 16:58:06] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 115.28.108.130:5000
+[2020-06-04 16:58:06] DEBUG [_make_request: connectionpool.py, 393] http://115.28.108.130:5000 "POST /api/user/login/ HTTP/1.1" 200 21
+[2020-06-04 16:58:06] INFO [log_case_info: case_log.py, 13] æµ‹è¯•ç”¨ä¾‹ï¼štest_user_login_normal
+[2020-06-04 16:58:06] INFO [log_case_info: case_log.py, 14] urlï¼šhttp://115.28.108.130:5000/api/user/login/
+[2020-06-04 16:58:06] INFO [log_case_info: case_log.py, 15] è¯·æ±‚å‚æ•°ï¼š{"name": "å¼ ä¸‰","password":"123456"}
+[2020-06-04 16:58:06] INFO [log_case_info: case_log.py, 16] æœŸæœ›ç»“æœï¼š<h1>ç™»å½•æˆåŠŸ</h1>
+[2020-06-04 16:58:06] INFO [log_case_info: case_log.py, 17] å®é™…ç»“æœï¼š<h1>ç™»å½•æˆåŠŸ</h1>
+[2020-06-04 16:58:06] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 115.28.108.130:5000
+[2020-06-04 16:58:06] DEBUG [_make_request: connectionpool.py, 393] http://115.28.108.130:5000 "POST /api/user/login/ HTTP/1.1" 200 42
+[2020-06-04 16:58:06] INFO [log_case_info: case_log.py, 13] æµ‹è¯•ç”¨ä¾‹ï¼štest_user_login_password_wrong
+[2020-06-04 16:58:06] INFO [log_case_info: case_log.py, 14] urlï¼šhttp://115.28.108.130:5000/api/user/login/
+[2020-06-04 16:58:06] INFO [log_case_info: case_log.py, 15] è¯·æ±‚å‚æ•°ï¼š{"name": "å¼ ä¸‰","password":"1234567"}
+[2020-06-04 16:58:06] INFO [log_case_info: case_log.py, 16] æœŸæœ›ç»“æœï¼š<h1>å¤±è´¥ï¼Œç”¨æˆ·åæˆ–å¯†ç é”™è¯¯</h1>
+[2020-06-04 16:58:06] INFO [log_case_info: case_log.py, 17] å®é™…ç»“æœï¼š<h1>å¤±è´¥ï¼Œç”¨æˆ·åæˆ–å¯†ç é”™è¯¯</h1>
+[2020-06-05 10:15:06] DEBUG [query_db: db.py, 23] select * from user where name = 'å¼ ä¸‰'
+[2020-06-05 10:15:07] DEBUG [query_db: db.py, 23] select * from user where name = 'èŒƒå†°å†°'
+[2020-06-05 10:57:42] INFO [<module>: run_all.py, 8] ================================== æµ‹è¯•å¼€å§‹ ==================================
+[2020-06-05 10:57:43] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 115.28.108.130:5000
+[2020-06-05 10:57:43] DEBUG [_make_request: connectionpool.py, 393] http://115.28.108.130:5000 "POST /api/user/login/ HTTP/1.1" 200 21
+[2020-06-05 10:57:43] INFO [log_case_info: case_log.py, 13] æµ‹è¯•ç”¨ä¾‹ï¼štest_user_login_normal
+[2020-06-05 10:57:43] INFO [log_case_info: case_log.py, 14] urlï¼šhttp://115.28.108.130:5000/api/user/login/
+[2020-06-05 10:57:43] INFO [log_case_info: case_log.py, 15] è¯·æ±‚å‚æ•°ï¼š{"name": "å¼ ä¸‰","password":"123456"}
+[2020-06-05 10:57:43] INFO [log_case_info: case_log.py, 16] æœŸæœ›ç»“æœï¼š<h1>ç™»å½•æˆåŠŸ</h1>
+[2020-06-05 10:57:43] INFO [log_case_info: case_log.py, 17] å®é™…ç»“æœï¼š<h1>ç™»å½•æˆåŠŸ</h1>
+[2020-06-05 10:57:43] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 115.28.108.130:5000
+[2020-06-05 10:57:43] DEBUG [_make_request: connectionpool.py, 393] http://115.28.108.130:5000 "POST /api/user/login/ HTTP/1.1" 200 42
+[2020-06-05 10:57:43] INFO [log_case_info: case_log.py, 13] æµ‹è¯•ç”¨ä¾‹ï¼štest_user_login_password_wrong
+[2020-06-05 10:57:43] INFO [log_case_info: case_log.py, 14] urlï¼šhttp://115.28.108.130:5000/api/user/login/
+[2020-06-05 10:57:43] INFO [log_case_info: case_log.py, 15] è¯·æ±‚å‚æ•°ï¼š{"name": "å¼ ä¸‰","password":"1234567"}
+[2020-06-05 10:57:43] INFO [log_case_info: case_log.py, 16] æœŸæœ›ç»“æœï¼š<h1>å¤±è´¥ï¼Œç”¨æˆ·åæˆ–å¯†ç é”™è¯¯</h1>
+[2020-06-05 10:57:43] INFO [log_case_info: case_log.py, 17] å®é™…ç»“æœï¼š<h1>å¤±è´¥ï¼Œç”¨æˆ·åæˆ–å¯†ç é”™è¯¯</h1>
+[2020-06-05 10:57:43] DEBUG [query_db: db.py, 23] select * from user where name = 'å¼ ä¸‰'
+[2020-06-05 10:57:43] DEBUG [query_db: db.py, 23] select * from user where name = 'èŒƒå†°å†°'
+[2020-06-05 11:00:01] INFO [<module>: run_all.py, 8] ================================== æµ‹è¯•å¼€å§‹ ==================================
+[2020-06-05 11:00:01] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 115.28.108.130:5000
+[2020-06-05 11:00:01] DEBUG [_make_request: connectionpool.py, 393] http://115.28.108.130:5000 "POST /api/user/login/ HTTP/1.1" 200 21
+[2020-06-05 11:00:01] INFO [log_case_info: case_log.py, 13] æµ‹è¯•ç”¨ä¾‹ï¼štest_user_login_normal
+[2020-06-05 11:00:01] INFO [log_case_info: case_log.py, 14] urlï¼šhttp://115.28.108.130:5000/api/user/login/
+[2020-06-05 11:00:01] INFO [log_case_info: case_log.py, 15] è¯·æ±‚å‚æ•°ï¼š{"name": "å¼ ä¸‰","password":"123456"}
+[2020-06-05 11:00:01] INFO [log_case_info: case_log.py, 16] æœŸæœ›ç»“æœï¼š<h1>ç™»å½•æˆåŠŸ</h1>
+[2020-06-05 11:00:01] INFO [log_case_info: case_log.py, 17] å®é™…ç»“æœï¼š<h1>ç™»å½•æˆåŠŸ</h1>
+[2020-06-05 11:00:01] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 115.28.108.130:5000
+[2020-06-05 11:00:01] DEBUG [_make_request: connectionpool.py, 393] http://115.28.108.130:5000 "POST /api/user/login/ HTTP/1.1" 200 42
+[2020-06-05 11:00:01] INFO [log_case_info: case_log.py, 13] æµ‹è¯•ç”¨ä¾‹ï¼štest_user_login_password_wrong
+[2020-06-05 11:00:01] INFO [log_case_info: case_log.py, 14] urlï¼šhttp://115.28.108.130:5000/api/user/login/
+[2020-06-05 11:00:01] INFO [log_case_info: case_log.py, 15] è¯·æ±‚å‚æ•°ï¼š{"name": "å¼ ä¸‰","password":"1234567"}
+[2020-06-05 11:00:01] INFO [log_case_info: case_log.py, 16] æœŸæœ›ç»“æœï¼š<h1>å¤±è´¥ï¼Œç”¨æˆ·åæˆ–å¯†ç é”™è¯¯</h1>
+[2020-06-05 11:00:01] INFO [log_case_info: case_log.py, 17] å®é™…ç»“æœï¼š<h1>å¤±è´¥ï¼Œç”¨æˆ·åæˆ–å¯†ç é”™è¯¯</h1>
+[2020-06-05 11:00:01] DEBUG [query_db: db.py, 23] select * from user where name = 'å¼ ä¸‰'
+[2020-06-05 11:00:01] DEBUG [query_db: db.py, 23] select * from user where name = 'èŒƒå†°å†°'
+[2020-06-05 11:03:30] INFO [<module>: run_all.py, 8] ================================== æµ‹è¯•å¼€å§‹ ==================================
+[2020-06-05 11:03:31] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 115.28.108.130:5000
+[2020-06-05 11:03:31] DEBUG [_make_request: connectionpool.py, 393] http://115.28.108.130:5000 "POST /api/user/login/ HTTP/1.1" 200 21
+[2020-06-05 11:03:31] INFO [log_case_info: case_log.py, 13] æµ‹è¯•ç”¨ä¾‹ï¼štest_user_login_normal
+[2020-06-05 11:03:31] INFO [log_case_info: case_log.py, 14] urlï¼šhttp://115.28.108.130:5000/api/user/login/
+[2020-06-05 11:03:31] INFO [log_case_info: case_log.py, 15] è¯·æ±‚å‚æ•°ï¼š{"name": "å¼ ä¸‰","password":"123456"}
+[2020-06-05 11:03:31] INFO [log_case_info: case_log.py, 16] æœŸæœ›ç»“æœï¼š<h1>ç™»å½•æˆåŠŸ</h1>
+[2020-06-05 11:03:31] INFO [log_case_info: case_log.py, 17] å®é™…ç»“æœï¼š<h1>ç™»å½•æˆåŠŸ</h1>
+[2020-06-05 11:03:31] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 115.28.108.130:5000
+[2020-06-05 11:03:31] DEBUG [_make_request: connectionpool.py, 393] http://115.28.108.130:5000 "POST /api/user/login/ HTTP/1.1" 200 42
+[2020-06-05 11:03:31] INFO [log_case_info: case_log.py, 13] æµ‹è¯•ç”¨ä¾‹ï¼štest_user_login_password_wrong
+[2020-06-05 11:03:31] INFO [log_case_info: case_log.py, 14] urlï¼šhttp://115.28.108.130:5000/api/user/login/
+[2020-06-05 11:03:31] INFO [log_case_info: case_log.py, 15] è¯·æ±‚å‚æ•°ï¼š{"name": "å¼ ä¸‰","password":"1234567"}
+[2020-06-05 11:03:31] INFO [log_case_info: case_log.py, 16] æœŸæœ›ç»“æœï¼š<h1>å¤±è´¥ï¼Œç”¨æˆ·åæˆ–å¯†ç é”™è¯¯</h1>
+[2020-06-05 11:03:31] INFO [log_case_info: case_log.py, 17] å®é™…ç»“æœï¼š<h1>å¤±è´¥ï¼Œç”¨æˆ·åæˆ–å¯†ç é”™è¯¯</h1>
+[2020-06-05 11:03:31] DEBUG [query_db: db.py, 23] select * from user where name = 'å¼ ä¸‰'
+[2020-06-05 11:03:31] DEBUG [query_db: db.py, 23] select * from user where name = 'èŒƒå†°å†°'
+[2020-06-05 11:03:33] INFO [send_email: send_email.py, 48] é‚®ä»¶å‘é€å®Œæˆï¼
+[2020-06-05 11:03:33] INFO [<module>: run_all.py, 15] ================================== æµ‹è¯•ç»“æŸ ==================================
+[2020-06-05 11:04:50] INFO [<module>: run_all.py, 8] ================================== æµ‹è¯•å¼€å§‹ ==================================
+[2020-06-05 11:04:50] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 115.28.108.130:5000
+[2020-06-05 11:04:50] DEBUG [_make_request: connectionpool.py, 393] http://115.28.108.130:5000 "POST /api/user/login/ HTTP/1.1" 200 21
+[2020-06-05 11:04:50] INFO [log_case_info: case_log.py, 13] æµ‹è¯•ç”¨ä¾‹ï¼štest_user_login_normal
+[2020-06-05 11:04:50] INFO [log_case_info: case_log.py, 14] urlï¼šhttp://115.28.108.130:5000/api/user/login/
+[2020-06-05 11:04:50] INFO [log_case_info: case_log.py, 15] è¯·æ±‚å‚æ•°ï¼š{"name": "å¼ ä¸‰","password":"123456"}
+[2020-06-05 11:04:50] INFO [log_case_info: case_log.py, 16] æœŸæœ›ç»“æœï¼š<h1>ç™»å½•æˆåŠŸ</h1>
+[2020-06-05 11:04:50] INFO [log_case_info: case_log.py, 17] å®é™…ç»“æœï¼š<h1>ç™»å½•æˆåŠŸ</h1>
+[2020-06-05 11:04:50] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 115.28.108.130:5000
+[2020-06-05 11:04:51] DEBUG [_make_request: connectionpool.py, 393] http://115.28.108.130:5000 "POST /api/user/login/ HTTP/1.1" 200 42
+[2020-06-05 11:04:51] INFO [log_case_info: case_log.py, 13] æµ‹è¯•ç”¨ä¾‹ï¼štest_user_login_password_wrong
+[2020-06-05 11:04:51] INFO [log_case_info: case_log.py, 14] urlï¼šhttp://115.28.108.130:5000/api/user/login/
+[2020-06-05 11:04:51] INFO [log_case_info: case_log.py, 15] è¯·æ±‚å‚æ•°ï¼š{"name": "å¼ ä¸‰","password":"1234567"}
+[2020-06-05 11:04:51] INFO [log_case_info: case_log.py, 16] æœŸæœ›ç»“æœï¼š<h1>å¤±è´¥ï¼Œç”¨æˆ·åæˆ–å¯†ç é”™è¯¯</h1>
+[2020-06-05 11:04:51] INFO [log_case_info: case_log.py, 17] å®é™…ç»“æœï¼š<h1>å¤±è´¥ï¼Œç”¨æˆ·åæˆ–å¯†ç é”™è¯¯</h1>
+[2020-06-05 11:04:51] DEBUG [query_db: db.py, 23] select * from user where name = 'å¼ ä¸‰'
+[2020-06-05 11:04:51] DEBUG [query_db: db.py, 23] select * from user where name = 'èŒƒå†°å†°'
+[2020-06-05 11:04:53] INFO [send_email: send_email.py, 48] é‚®ä»¶å‘é€å®Œæˆï¼
+[2020-06-05 11:04:53] INFO [<module>: run_all.py, 15] ================================== æµ‹è¯•ç»“æŸ ==================================
+[2020-06-05 11:08:47] INFO [<module>: run_all.py, 8] ================================== æµ‹è¯•å¼€å§‹ ==================================
+[2020-06-05 11:08:48] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 115.28.108.130:5000
+[2020-06-05 11:08:48] DEBUG [_make_request: connectionpool.py, 393] http://115.28.108.130:5000 "POST /api/user/login/ HTTP/1.1" 200 21
+[2020-06-05 11:08:48] INFO [log_case_info: case_log.py, 13] æµ‹è¯•ç”¨ä¾‹ï¼štest_user_login_normal
+[2020-06-05 11:08:48] INFO [log_case_info: case_log.py, 14] urlï¼šhttp://115.28.108.130:5000/api/user/login/
+[2020-06-05 11:08:48] INFO [log_case_info: case_log.py, 15] è¯·æ±‚å‚æ•°ï¼š{"name": "å¼ ä¸‰","password":"123456"}
+[2020-06-05 11:08:48] INFO [log_case_info: case_log.py, 16] æœŸæœ›ç»“æœï¼š<h1>ç™»å½•æˆåŠŸ</h1>
+[2020-06-05 11:08:48] INFO [log_case_info: case_log.py, 17] å®é™…ç»“æœï¼š<h1>ç™»å½•æˆåŠŸ</h1>
+[2020-06-05 11:08:48] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 115.28.108.130:5000
+[2020-06-05 11:08:48] DEBUG [_make_request: connectionpool.py, 393] http://115.28.108.130:5000 "POST /api/user/login/ HTTP/1.1" 200 42
+[2020-06-05 11:08:48] INFO [log_case_info: case_log.py, 13] æµ‹è¯•ç”¨ä¾‹ï¼štest_user_login_password_wrong
+[2020-06-05 11:08:48] INFO [log_case_info: case_log.py, 14] urlï¼šhttp://115.28.108.130:5000/api/user/login/
+[2020-06-05 11:08:48] INFO [log_case_info: case_log.py, 15] è¯·æ±‚å‚æ•°ï¼š{"name": "å¼ ä¸‰","password":"1234567"}
+[2020-06-05 11:08:48] INFO [log_case_info: case_log.py, 16] æœŸæœ›ç»“æœï¼š<h1>å¤±è´¥ï¼Œç”¨æˆ·åæˆ–å¯†ç é”™è¯¯</h1>
+[2020-06-05 11:08:48] INFO [log_case_info: case_log.py, 17] å®é™…ç»“æœï¼š<h1>å¤±è´¥ï¼Œç”¨æˆ·åæˆ–å¯†ç é”™è¯¯</h1>
+[2020-06-05 11:08:48] DEBUG [query_db: db.py, 23] select * from user where name = 'å¼ ä¸‰'
+[2020-06-05 11:08:48] DEBUG [query_db: db.py, 23] select * from user where name = 'èŒƒå†°å†°'
+[2020-06-05 11:08:52] INFO [send_email: send_email.py, 48] é‚®ä»¶å‘é€å®Œæˆï¼
+[2020-06-05 11:08:52] INFO [<module>: run_all.py, 15] ================================== æµ‹è¯•ç»“æŸ ==================================
+[2020-06-05 11:13:19] INFO [<module>: run_all.py, 8] ================================== æµ‹è¯•å¼€å§‹ ==================================
+[2020-06-05 11:13:19] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 115.28.108.130:5000
+[2020-06-05 11:13:19] DEBUG [_make_request: connectionpool.py, 393] http://115.28.108.130:5000 "POST /api/user/login/ HTTP/1.1" 200 21
+[2020-06-05 11:13:19] INFO [log_case_info: case_log.py, 13] æµ‹è¯•ç”¨ä¾‹ï¼štest_user_login_normal
+[2020-06-05 11:13:19] INFO [log_case_info: case_log.py, 14] urlï¼šhttp://115.28.108.130:5000/api/user/login/
+[2020-06-05 11:13:19] INFO [log_case_info: case_log.py, 15] è¯·æ±‚å‚æ•°ï¼š{"name": "å¼ ä¸‰","password":"123456"}
+[2020-06-05 11:13:19] INFO [log_case_info: case_log.py, 16] æœŸæœ›ç»“æœï¼š<h1>ç™»å½•æˆåŠŸ</h1>
+[2020-06-05 11:13:19] INFO [log_case_info: case_log.py, 17] å®é™…ç»“æœï¼š<h1>ç™»å½•æˆåŠŸ</h1>
+[2020-06-05 11:13:19] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 115.28.108.130:5000
+[2020-06-05 11:13:20] DEBUG [_make_request: connectionpool.py, 393] http://115.28.108.130:5000 "POST /api/user/login/ HTTP/1.1" 200 42
+[2020-06-05 11:13:20] INFO [log_case_info: case_log.py, 13] æµ‹è¯•ç”¨ä¾‹ï¼štest_user_login_password_wrong
+[2020-06-05 11:13:20] INFO [log_case_info: case_log.py, 14] urlï¼šhttp://115.28.108.130:5000/api/user/login/
+[2020-06-05 11:13:20] INFO [log_case_info: case_log.py, 15] è¯·æ±‚å‚æ•°ï¼š{"name": "å¼ ä¸‰","password":"1234567"}
+[2020-06-05 11:13:20] INFO [log_case_info: case_log.py, 16] æœŸæœ›ç»“æœï¼š<h1>å¤±è´¥ï¼Œç”¨æˆ·åæˆ–å¯†ç é”™è¯¯</h1>
+[2020-06-05 11:13:20] INFO [log_case_info: case_log.py, 17] å®é™…ç»“æœï¼š<h1>å¤±è´¥ï¼Œç”¨æˆ·åæˆ–å¯†ç é”™è¯¯</h1>
+[2020-06-05 11:13:20] DEBUG [query_db: db.py, 23] select * from user where name = 'å¼ ä¸‰'
+[2020-06-05 11:13:20] DEBUG [query_db: db.py, 23] select * from user where name = 'èŒƒå†°å†°'
+[2020-06-05 11:13:22] INFO [send_email: send_email.py, 48] é‚®ä»¶å‘é€å®Œæˆï¼
+[2020-06-05 11:13:22] INFO [<module>: run_all.py, 15] ================================== æµ‹è¯•ç»“æŸ ==================================
+[2020-06-05 11:14:18] INFO [<module>: run_all.py, 8] ================================== æµ‹è¯•å¼€å§‹ ==================================
+[2020-06-05 11:14:18] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 115.28.108.130:5000
+[2020-06-05 11:14:18] DEBUG [_make_request: connectionpool.py, 393] http://115.28.108.130:5000 "POST /api/user/login/ HTTP/1.1" 200 21
+[2020-06-05 11:14:18] INFO [log_case_info: case_log.py, 13] æµ‹è¯•ç”¨ä¾‹ï¼štest_user_login_normal
+[2020-06-05 11:14:18] INFO [log_case_info: case_log.py, 14] urlï¼šhttp://115.28.108.130:5000/api/user/login/
+[2020-06-05 11:14:18] INFO [log_case_info: case_log.py, 15] è¯·æ±‚å‚æ•°ï¼š{"name": "å¼ ä¸‰","password":"123456"}
+[2020-06-05 11:14:18] INFO [log_case_info: case_log.py, 16] æœŸæœ›ç»“æœï¼š<h1>ç™»å½•æˆåŠŸ</h1>
+[2020-06-05 11:14:18] INFO [log_case_info: case_log.py, 17] å®é™…ç»“æœï¼š<h1>ç™»å½•æˆåŠŸ</h1>
+[2020-06-05 11:14:18] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 115.28.108.130:5000
+[2020-06-05 11:14:18] DEBUG [_make_request: connectionpool.py, 393] http://115.28.108.130:5000 "POST /api/user/login/ HTTP/1.1" 200 42
+[2020-06-05 11:14:18] INFO [log_case_info: case_log.py, 13] æµ‹è¯•ç”¨ä¾‹ï¼štest_user_login_password_wrong
+[2020-06-05 11:14:18] INFO [log_case_info: case_log.py, 14] urlï¼šhttp://115.28.108.130:5000/api/user/login/
+[2020-06-05 11:14:18] INFO [log_case_info: case_log.py, 15] è¯·æ±‚å‚æ•°ï¼š{"name": "å¼ ä¸‰","password":"1234567"}
+[2020-06-05 11:14:18] INFO [log_case_info: case_log.py, 16] æœŸæœ›ç»“æœï¼š<h1>å¤±è´¥ï¼Œç”¨æˆ·åæˆ–å¯†ç é”™è¯¯</h1>
+[2020-06-05 11:14:18] INFO [log_case_info: case_log.py, 17] å®é™…ç»“æœï¼š<h1>å¤±è´¥ï¼Œç”¨æˆ·åæˆ–å¯†ç é”™è¯¯</h1>
+[2020-06-05 11:14:18] DEBUG [query_db: db.py, 23] select * from user where name = 'å¼ ä¸‰'
+[2020-06-05 11:14:18] DEBUG [query_db: db.py, 23] select * from user where name = 'èŒƒå†°å†°'
+[2020-06-05 11:14:20] INFO [send_email: send_email.py, 48] é‚®ä»¶å‘é€å®Œæˆï¼
+[2020-06-05 11:14:20] INFO [<module>: run_all.py, 15] ================================== æµ‹è¯•ç»“æŸ ==================================
+[2020-06-05 11:27:50] INFO [<module>: run_all.py, 8] ================================== æµ‹è¯•å¼€å§‹ ==================================
+[2020-06-05 11:27:51] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 115.28.108.130:5000
+[2020-06-05 11:27:51] DEBUG [_make_request: connectionpool.py, 393] http://115.28.108.130:5000 "POST /api/user/login/ HTTP/1.1" 200 21
+[2020-06-05 11:27:51] INFO [log_case_info: case_log.py, 13] æµ‹è¯•ç”¨ä¾‹ï¼štest_user_login_normal
+[2020-06-05 11:27:51] INFO [log_case_info: case_log.py, 14] urlï¼šhttp://115.28.108.130:5000/api/user/login/
+[2020-06-05 11:27:51] INFO [log_case_info: case_log.py, 15] è¯·æ±‚å‚æ•°ï¼š{"name": "å¼ ä¸‰","password":"123456"}
+[2020-06-05 11:27:51] INFO [log_case_info: case_log.py, 16] æœŸæœ›ç»“æœï¼š<h1>ç™»å½•æˆåŠŸ</h1>
+[2020-06-05 11:27:51] INFO [log_case_info: case_log.py, 17] å®é™…ç»“æœï¼š<h1>ç™»å½•æˆåŠŸ</h1>
+[2020-06-05 11:27:51] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 115.28.108.130:5000
+[2020-06-05 11:27:51] DEBUG [_make_request: connectionpool.py, 393] http://115.28.108.130:5000 "POST /api/user/login/ HTTP/1.1" 200 42
+[2020-06-05 11:27:51] INFO [log_case_info: case_log.py, 13] æµ‹è¯•ç”¨ä¾‹ï¼štest_user_login_password_wrong
+[2020-06-05 11:27:51] INFO [log_case_info: case_log.py, 14] urlï¼šhttp://115.28.108.130:5000/api/user/login/
+[2020-06-05 11:27:51] INFO [log_case_info: case_log.py, 15] è¯·æ±‚å‚æ•°ï¼š{"name": "å¼ ä¸‰","password":"1234567"}
+[2020-06-05 11:27:51] INFO [log_case_info: case_log.py, 16] æœŸæœ›ç»“æœï¼š<h1>å¤±è´¥ï¼Œç”¨æˆ·åæˆ–å¯†ç é”™è¯¯</h1>
+[2020-06-05 11:27:51] INFO [log_case_info: case_log.py, 17] å®é™…ç»“æœï¼š<h1>å¤±è´¥ï¼Œç”¨æˆ·åæˆ–å¯†ç é”™è¯¯</h1>
+[2020-06-05 11:27:51] DEBUG [query_db: db.py, 23] select * from user where name = 'å¼ ä¸‰'
+[2020-06-05 11:27:51] DEBUG [query_db: db.py, 23] select * from user where name = 'èŒƒå†°å†°'
+[2020-06-05 11:27:54] INFO [send_email: send_email.py, 50] é‚®ä»¶å‘é€å®Œæˆï¼
+[2020-06-05 11:27:54] INFO [<module>: run_all.py, 15] ================================== æµ‹è¯•ç»“æŸ ==================================
+[2020-06-05 11:54:37] INFO [<module>: run_all.py, 8] ================================== æµ‹è¯•å¼€å§‹ ==================================
+[2020-06-05 11:54:37] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 115.28.108.130:5000
+[2020-06-05 11:54:37] DEBUG [_make_request: connectionpool.py, 393] http://115.28.108.130:5000 "POST /api/user/login/ HTTP/1.1" 200 21
+[2020-06-05 11:54:37] INFO [log_case_info: case_log.py, 13] æµ‹è¯•ç”¨ä¾‹ï¼štest_user_login_normal
+[2020-06-05 11:54:37] INFO [log_case_info: case_log.py, 14] urlï¼šhttp://115.28.108.130:5000/api/user/login/
+[2020-06-05 11:54:37] INFO [log_case_info: case_log.py, 15] è¯·æ±‚å‚æ•°ï¼š{"name": "å¼ ä¸‰","password":"123456"}
+[2020-06-05 11:54:37] INFO [log_case_info: case_log.py, 16] æœŸæœ›ç»“æœï¼š<h1>ç™»å½•æˆåŠŸ</h1>
+[2020-06-05 11:54:37] INFO [log_case_info: case_log.py, 17] å®é™…ç»“æœï¼š<h1>ç™»å½•æˆåŠŸ</h1>
+[2020-06-05 11:54:37] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): 115.28.108.130:5000
+[2020-06-05 11:54:37] DEBUG [_make_request: connectionpool.py, 393] http://115.28.108.130:5000 "POST /api/user/login/ HTTP/1.1" 200 42
+[2020-06-05 11:54:37] INFO [log_case_info: case_log.py, 13] æµ‹è¯•ç”¨ä¾‹ï¼štest_user_login_password_wrong
+[2020-06-05 11:54:37] INFO [log_case_info: case_log.py, 14] urlï¼šhttp://115.28.108.130:5000/api/user/login/
+[2020-06-05 11:54:37] INFO [log_case_info: case_log.py, 15] è¯·æ±‚å‚æ•°ï¼š{"name": "å¼ ä¸‰","password":"1234567"}
+[2020-06-05 11:54:37] INFO [log_case_info: case_log.py, 16] æœŸæœ›ç»“æœï¼š<h1>å¤±è´¥ï¼Œç”¨æˆ·åæˆ–å¯†ç é”™è¯¯</h1>
+[2020-06-05 11:54:37] INFO [log_case_info: case_log.py, 17] å®é™…ç»“æœï¼š<h1>å¤±è´¥ï¼Œç”¨æˆ·åæˆ–å¯†ç é”™è¯¯</h1>
+[2020-06-05 11:54:37] DEBUG [query_db: db.py, 23] select * from user where name = 'å¼ ä¸‰'
+[2020-06-05 11:54:37] DEBUG [query_db: db.py, 23] select * from user where name = 'èŒƒå†°å†°'
+[2020-06-05 16:22:25] INFO [<module>: run_all.py, 8] ================================== æµ‹è¯•å¼€å§‹ ==================================
+[2020-06-05 16:22:28] INFO [send_email: send_email.py, 50] é‚®ä»¶å‘é€å®Œæˆï¼
+[2020-06-05 16:22:28] INFO [<module>: run_all.py, 15] ================================== æµ‹è¯•ç»“æŸ ==================================
+[2020-06-05 16:23:41] INFO [<module>: run_all.py, 8] ================================== æµ‹è¯•å¼€å§‹ ==================================
+[2020-06-05 16:23:43] INFO [send_email: send_email.py, 50] é‚®ä»¶å‘é€å®Œæˆï¼
+[2020-06-05 16:23:43] INFO [<module>: run_all.py, 15] ================================== æµ‹è¯•ç»“æŸ ==================================
+[2020-06-05 16:27:37] INFO [<module>: run_all.py, 8] ================================== æµ‹è¯•å¼€å§‹ ==================================
+[2020-06-05 16:27:39] INFO [send_email: send_email.py, 50] é‚®ä»¶å‘é€å®Œæˆï¼
+[2020-06-05 16:27:39] INFO [<module>: run_all.py, 15] ================================== æµ‹è¯•ç»“æŸ ==================================
+[2020-06-05 16:31:20] INFO [<module>: run_all.py, 8] ================================== æµ‹è¯•å¼€å§‹ ==================================
+[2020-06-05 16:31:23] INFO [send_email: send_email.py, 50] é‚®ä»¶å‘é€å®Œæˆï¼
+[2020-06-05 16:31:23] INFO [<module>: run_all.py, 15] ================================== æµ‹è¯•ç»“æŸ ==================================
+[2020-06-05 16:34:34] INFO [<module>: run_all.py, 8] ================================== æµ‹è¯•å¼€å§‹ ==================================
+[2020-06-05 16:34:37] INFO [send_email: send_email.py, 50] é‚®ä»¶å‘é€å®Œæˆï¼
+[2020-06-05 16:34:37] INFO [<module>: run_all.py, 15] ================================== æµ‹è¯•ç»“æŸ ==================================
+[2020-06-05 16:42:51] INFO [<module>: run_all.py, 8] ================================== æµ‹è¯•å¼€å§‹ ==================================
+[2020-06-05 16:42:54] INFO [send_email: send_email.py, 50] é‚®ä»¶å‘é€å®Œæˆï¼
+[2020-06-05 16:42:54] INFO [<module>: run_all.py, 15] ================================== æµ‹è¯•ç»“æŸ ==================================
+[2020-06-05 16:45:08] INFO [<module>: run_all.py, 8] ================================== æµ‹è¯•å¼€å§‹ ==================================
+[2020-06-05 16:45:10] INFO [send_email: send_email.py, 50] é‚®ä»¶å‘é€å®Œæˆï¼
+[2020-06-05 16:45:10] INFO [<module>: run_all.py, 15] ================================== æµ‹è¯•ç»“æŸ ==================================
+[2020-06-05 16:48:20] INFO [<module>: run_all.py, 8] ================================== æµ‹è¯•å¼€å§‹ ==================================
+[2020-06-05 16:48:23] INFO [send_email: send_email.py, 50] é‚®ä»¶å‘é€å®Œæˆï¼
+[2020-06-05 16:48:23] INFO [<module>: run_all.py, 15] ================================== æµ‹è¯•ç»“æŸ ==================================
+[2020-06-05 17:05:16] INFO [<module>: run_all.py, 8] ================================== æµ‹è¯•å¼€å§‹ ==================================
+[2020-06-05 17:05:19] INFO [send_email: send_email.py, 50] é‚®ä»¶å‘é€å®Œæˆï¼
+[2020-06-05 17:05:19] INFO [<module>: run_all.py, 15] ================================== æµ‹è¯•ç»“æŸ ==================================
+[2020-06-05 17:26:32] INFO [<module>: run_all.py, 8] ================================== æµ‹è¯•å¼€å§‹ ==================================
+[2020-06-05 17:26:35] INFO [send_email: send_email.py, 50] é‚®ä»¶å‘é€å®Œæˆï¼
+[2020-06-05 17:26:35] INFO [<module>: run_all.py, 15] ================================== æµ‹è¯•ç»“æŸ ==================================
+[2020-06-05 17:29:32] INFO [<module>: run_all.py, 8] ================================== æµ‹è¯•å¼€å§‹ ==================================
+[2020-06-05 17:29:34] INFO [send_email: send_email.py, 50] é‚®ä»¶å‘é€å®Œæˆï¼
+[2020-06-05 17:29:34] INFO [<module>: run_all.py, 15] ================================== æµ‹è¯•ç»“æŸ ==================================
+[2020-06-05 17:49:59] INFO [<module>: run_all.py, 8] ================================== æµ‹è¯•å¼€å§‹ ==================================
+[2020-06-05 17:50:01] INFO [send_email: send_email.py, 50] é‚®ä»¶å‘é€å®Œæˆï¼
+[2020-06-05 17:50:01] INFO [<module>: run_all.py, 15] ================================== æµ‹è¯•ç»“æŸ ==================================
+[2020-06-05 17:55:03] INFO [<module>: run_all.py, 8] ================================== æµ‹è¯•å¼€å§‹ ==================================
+[2020-06-05 17:55:06] INFO [send_email: send_email.py, 50] é‚®ä»¶å‘é€å®Œæˆï¼
+[2020-06-05 17:55:06] INFO [<module>: run_all.py, 15] ================================== æµ‹è¯•ç»“æŸ ==================================
+[2020-06-05 18:25:08] INFO [<module>: run_all.py, 8] ================================== æµ‹è¯•å¼€å§‹ ==================================
+[2020-06-05 18:25:11] INFO [send_email: send_email.py, 50] é‚®ä»¶å‘é€å®Œæˆï¼
+[2020-06-05 18:25:11] INFO [<module>: run_all.py, 15] ================================== æµ‹è¯•ç»“æŸ ==================================
+[2020-06-05 18:54:00] INFO [<module>: run_all.py, 8] ================================== æµ‹è¯•å¼€å§‹ ==================================
+[2020-06-05 18:54:03] INFO [send_email: send_email.py, 50] é‚®ä»¶å‘é€å®Œæˆï¼
+[2020-06-05 18:54:03] INFO [<module>: run_all.py, 15] ================================== æµ‹è¯•ç»“æŸ ==================================
+[2020-06-05 18:54:28] INFO [<module>: run_all.py, 8] ================================== æµ‹è¯•å¼€å§‹ ==================================
+[2020-06-05 18:54:30] INFO [send_email: send_email.py, 50] é‚®ä»¶å‘é€å®Œæˆï¼
+[2020-06-05 18:54:30] INFO [<module>: run_all.py, 15] ================================== æµ‹è¯•ç»“æŸ ==================================
+[2020-06-08 15:17:19] INFO [<module>: run_all.py, 8] ================================== æµ‹è¯•å¼€å§‹ ==================================
+[2020-06-08 15:17:22] INFO [send_email: send_email.py, 50] é‚®ä»¶å‘é€å®Œæˆï¼
+[2020-06-08 15:17:22] INFO [<module>: run_all.py, 16] ================================== æµ‹è¯•ç»“æŸ ==================================
+[2020-06-08 15:32:57] INFO [<module>: run_all.py, 8] ================================== æµ‹è¯•å¼€å§‹ ==================================
+[2020-06-08 15:33:00] INFO [send_email: send_email.py, 50] é‚®ä»¶å‘é€å®Œæˆï¼
+[2020-06-08 15:33:00] INFO [<module>: run_all.py, 16] ================================== æµ‹è¯•ç»“æŸ ==================================
+[2020-06-08 15:35:04] INFO [<module>: run_all.py, 8] ================================== æµ‹è¯•å¼€å§‹ ==================================
+[2020-06-08 15:35:06] INFO [send_email: send_email.py, 50] é‚®ä»¶å‘é€å®Œæˆï¼
+[2020-06-08 15:35:06] INFO [<module>: run_all.py, 16] ================================== æµ‹è¯•ç»“æŸ ==================================
+[2020-06-08 15:44:05] INFO [<module>: run_all.py, 8] ================================== æµ‹è¯•å¼€å§‹ ==================================
+[2020-06-08 15:44:07] INFO [send_email: send_email.py, 50] é‚®ä»¶å‘é€å®Œæˆï¼
+[2020-06-08 15:44:07] INFO [<module>: run_all.py, 16] ================================== æµ‹è¯•ç»“æŸ ==================================
+[2020-06-08 16:03:40] INFO [<module>: run_all.py, 8] ================================== æµ‹è¯•å¼€å§‹ ==================================
+[2020-06-08 16:06:57] INFO [<module>: run_all.py, 8] ================================== æµ‹è¯•å¼€å§‹ ==================================
+[2020-06-08 16:07:00] INFO [send_email: send_email.py, 50] é‚®ä»¶å‘é€å®Œæˆï¼
+[2020-06-08 16:07:00] INFO [<module>: run_all.py, 16] ================================== æµ‹è¯•ç»“æŸ ==================================
+[2020-06-08 16:16:46] INFO [<module>: run_all.py, 8] ================================== æµ‹è¯•å¼€å§‹ ==================================
+[2020-06-08 16:16:48] INFO [send_email: send_email.py, 50] é‚®ä»¶å‘é€å®Œæˆï¼
+[2020-06-08 16:16:48] INFO [<module>: run_all.py, 16] ================================== æµ‹è¯•ç»“æŸ ==================================
+[2020-06-08 16:22:13] INFO [<module>: run_all.py, 8] ================================== æµ‹è¯•å¼€å§‹ ==================================
+[2020-06-08 16:22:15] INFO [send_email: send_email.py, 50] é‚®ä»¶å‘é€å®Œæˆï¼
+[2020-06-08 16:22:15] INFO [<module>: run_all.py, 16] ================================== æµ‹è¯•ç»“æŸ ==================================
+[2020-06-08 16:34:05] INFO [<module>: run_all.py, 8] ================================== æµ‹è¯•å¼€å§‹ ==================================
+[2020-06-08 16:34:07] INFO [send_email: send_email.py, 50] é‚®ä»¶å‘é€å®Œæˆï¼
+[2020-06-08 16:34:07] INFO [<module>: run_all.py, 16] ================================== æµ‹è¯•ç»“æŸ ==================================
+[2020-06-08 16:36:08] INFO [<module>: run_all.py, 8] ================================== æµ‹è¯•å¼€å§‹ ==================================
+[2020-06-08 16:36:11] INFO [send_email: send_email.py, 50] é‚®ä»¶å‘é€å®Œæˆï¼
+[2020-06-08 16:36:11] INFO [<module>: run_all.py, 16] ================================== æµ‹è¯•ç»“æŸ ==================================
+[2020-06-08 17:11:46] INFO [<module>: run_all.py, 8] ================================== æµ‹è¯•å¼€å§‹ ==================================
+[2020-06-08 17:11:49] INFO [send_email: send_email.py, 50] é‚®ä»¶å‘é€å®Œæˆï¼
+[2020-06-08 17:11:49] INFO [<module>: run_all.py, 16] ================================== æµ‹è¯•ç»“æŸ ==================================
+[2020-06-08 17:12:12] INFO [<module>: run_all.py, 8] ================================== æµ‹è¯•å¼€å§‹ ==================================
+[2020-06-08 17:12:15] INFO [send_email: send_email.py, 50] é‚®ä»¶å‘é€å®Œæˆï¼
+[2020-06-08 17:12:15] INFO [<module>: run_all.py, 16] ================================== æµ‹è¯•ç»“æŸ ==================================
+[2020-06-08 17:20:07] INFO [<module>: run_all.py, 8] ================================== æµ‹è¯•å¼€å§‹ ==================================
+[2020-06-08 17:20:09] INFO [send_email: send_email.py, 50] é‚®ä»¶å‘é€å®Œæˆï¼
+[2020-06-08 17:20:09] INFO [<module>: run_all.py, 16] ================================== æµ‹è¯•ç»“æŸ ==================================
+[2020-06-08 17:23:32] INFO [<module>: run_all.py, 8] ================================== æµ‹è¯•å¼€å§‹ ==================================
+[2020-06-08 17:29:24] INFO [<module>: run_all.py, 8] ================================== æµ‹è¯•å¼€å§‹ ==================================
+[2020-06-08 17:29:26] INFO [send_email: send_email.py, 50] é‚®ä»¶å‘é€å®Œæˆï¼
+[2020-06-08 17:29:26] INFO [<module>: run_all.py, 16] ================================== æµ‹è¯•ç»“æŸ ==================================
+[2020-06-08 17:29:53] INFO [<module>: run_all.py, 8] ================================== æµ‹è¯•å¼€å§‹ ==================================
+[2020-06-08 17:29:55] INFO [send_email: send_email.py, 50] é‚®ä»¶å‘é€å®Œæˆï¼
+[2020-06-08 17:29:55] INFO [<module>: run_all.py, 16] ================================== æµ‹è¯•ç»“æŸ ==================================
+[2020-06-08 17:34:43] INFO [<module>: run_all.py, 8] ================================== æµ‹è¯•å¼€å§‹ ==================================
+[2020-06-08 17:34:46] INFO [send_email: send_email.py, 50] é‚®ä»¶å‘é€å®Œæˆï¼
+[2020-06-08 17:34:46] INFO [<module>: run_all.py, 16] ================================== æµ‹è¯•ç»“æŸ ==================================
+[2020-06-08 17:36:54] INFO [<module>: run_all.py, 8] ================================== æµ‹è¯•å¼€å§‹ ==================================
+[2020-06-08 17:36:56] INFO [send_email: send_email.py, 50] é‚®ä»¶å‘é€å®Œæˆï¼
+[2020-06-08 17:36:56] INFO [<module>: run_all.py, 16] ================================== æµ‹è¯•ç»“æŸ ==================================
+[2020-06-08 17:37:56] INFO [<module>: run_all.py, 8] ================================== æµ‹è¯•å¼€å§‹ ==================================
+[2020-06-08 17:37:58] INFO [send_email: send_email.py, 50] é‚®ä»¶å‘é€å®Œæˆï¼
+[2020-06-08 17:37:58] INFO [<module>: run_all.py, 16] ================================== æµ‹è¯•ç»“æŸ ==================================
+[2020-06-08 17:50:21] INFO [<module>: run_all.py, 8] ================================== æµ‹è¯•å¼€å§‹ ==================================
+[2020-06-08 17:50:24] INFO [send_email: send_email.py, 50] é‚®ä»¶å‘é€å®Œæˆï¼
+[2020-06-08 17:50:24] INFO [<module>: run_all.py, 16] ================================== æµ‹è¯•ç»“æŸ ==================================
+[2020-06-08 17:51:50] INFO [<module>: run_all.py, 8] ================================== æµ‹è¯•å¼€å§‹ ==================================
+[2020-06-08 17:51:53] INFO [send_email: send_email.py, 50] é‚®ä»¶å‘é€å®Œæˆï¼
+[2020-06-08 17:51:53] INFO [<module>: run_all.py, 16] ================================== æµ‹è¯•ç»“æŸ ==================================
+[2020-06-08 17:52:44] INFO [<module>: run_all.py, 8] ================================== æµ‹è¯•å¼€å§‹ ==================================
+[2020-06-08 17:52:47] INFO [send_email: send_email.py, 50] é‚®ä»¶å‘é€å®Œæˆï¼
+[2020-06-08 17:52:47] INFO [<module>: run_all.py, 16] ================================== æµ‹è¯•ç»“æŸ ==================================
+[2020-06-08 17:53:24] INFO [<module>: run_all.py, 8] ================================== æµ‹è¯•å¼€å§‹ ==================================
+[2020-06-08 17:53:26] INFO [send_email: send_email.py, 50] é‚®ä»¶å‘é€å®Œæˆï¼
+[2020-06-08 17:53:26] INFO [<module>: run_all.py, 16] ================================== æµ‹è¯•ç»“æŸ ==================================
+[2020-06-08 17:54:18] INFO [<module>: run_all.py, 8] ================================== æµ‹è¯•å¼€å§‹ ==================================
+[2020-06-08 17:54:20] INFO [send_email: send_email.py, 50] é‚®ä»¶å‘é€å®Œæˆï¼
+[2020-06-08 17:54:20] INFO [<module>: run_all.py, 16] ================================== æµ‹è¯•ç»“æŸ ==================================
+[2020-06-08 17:55:37] INFO [<module>: run_all.py, 8] ================================== æµ‹è¯•å¼€å§‹ ==================================
+[2020-06-08 17:55:39] INFO [send_email: send_email.py, 50] é‚®ä»¶å‘é€å®Œæˆï¼
+[2020-06-08 17:55:39] INFO [<module>: run_all.py, 16] ================================== æµ‹è¯•ç»“æŸ ==================================
+[2020-06-08 18:00:37] INFO [<module>: run_all.py, 8] ================================== æµ‹è¯•å¼€å§‹ ==================================
+[2020-06-08 18:00:39] INFO [send_email: send_email.py, 50] é‚®ä»¶å‘é€å®Œæˆï¼
+[2020-06-08 18:00:39] INFO [<module>: run_all.py, 16] ================================== æµ‹è¯•ç»“æŸ ==================================
+[2020-06-08 18:01:10] INFO [<module>: run_all.py, 8] ================================== æµ‹è¯•å¼€å§‹ ==================================
+[2020-06-08 18:01:12] INFO [send_email: send_email.py, 50] é‚®ä»¶å‘é€å®Œæˆï¼
+[2020-06-08 18:01:12] INFO [<module>: run_all.py, 16] ================================== æµ‹è¯•ç»“æŸ ==================================
+[2020-06-08 18:02:34] INFO [<module>: run_all.py, 8] ================================== æµ‹è¯•å¼€å§‹ ==================================
+[2020-06-08 18:02:36] INFO [send_email: send_email.py, 50] é‚®ä»¶å‘é€å®Œæˆï¼
+[2020-06-08 18:02:36] INFO [<module>: run_all.py, 16] ================================== æµ‹è¯•ç»“æŸ ==================================
+[2020-06-11 11:40:51] INFO [<module>: run_all.py, 8] ================================== æµ‹è¯•å¼€å§‹ ==================================
+[2020-06-11 11:40:55] INFO [send_email: send_email.py, 50] é‚®ä»¶å‘é€å®Œæˆï¼
+[2020-06-11 11:40:55] INFO [<module>: run_all.py, 16] ================================== æµ‹è¯•ç»“æŸ ==================================
+[2020-06-15 18:06:07] INFO [<module>: run_all.py, 8] ================================== æµ‹è¯•å¼€å§‹ ==================================
+[2020-06-15 19:01:19] INFO [send_email: send_email.py, 50] é‚®ä»¶å‘é€å®Œæˆï¼
+[2020-06-15 19:01:19] INFO [<module>: run_all.py, 16] ================================== æµ‹è¯•ç»“æŸ ==================================
+[2020-06-16 10:20:00] INFO [<module>: run_all.py, 8] ================================== æµ‹è¯•å¼€å§‹ ==================================
+[2020-06-16 10:50:44] INFO [send_email: send_email.py, 50] é‚®ä»¶å‘é€å®Œæˆï¼
+[2020-06-16 10:50:44] INFO [<module>: run_all.py, 16] ================================== æµ‹è¯•ç»“æŸ ==================================
+[2020-06-16 12:39:02] INFO [<module>: run_all.py, 8] ================================== æµ‹è¯•å¼€å§‹ ==================================
+[2020-06-16 13:26:01] INFO [send_email: send_email.py, 50] é‚®ä»¶å‘é€å®Œæˆï¼
+[2020-06-16 13:26:01] INFO [<module>: run_all.py, 16] ================================== æµ‹è¯•ç»“æŸ ==================================
+[2020-06-16 16:58:21] INFO [<module>: run_all.py, 8] ================================== æµ‹è¯•å¼€å§‹ ==================================
+[2020-06-16 17:55:40] INFO [send_email: send_email.py, 50] é‚®ä»¶å‘é€å®Œæˆï¼
+[2020-06-16 17:55:40] INFO [<module>: run_all.py, 16] ================================== æµ‹è¯•ç»“æŸ ==================================
+[2020-06-17 14:14:29] INFO [<module>: run_all.py, 8] ================================== æµ‹è¯•å¼€å§‹ ==================================
+[2020-06-17 15:15:51] INFO [send_email: send_email.py, 50] é‚®ä»¶å‘é€å®Œæˆï¼
+[2020-06-17 15:15:51] INFO [<module>: run_all.py, 16] ================================== æµ‹è¯•ç»“æŸ ==================================
+[2020-06-18 14:35:02] INFO [<module>: run_all.py, 8] ================================== æµ‹è¯•å¼€å§‹ ==================================
+[2020-06-18 15:46:45] INFO [send_email: send_email.py, 50] é‚®ä»¶å‘é€å®Œæˆï¼
+[2020-06-18 15:46:45] INFO [<module>: run_all.py, 16] ================================== æµ‹è¯•ç»“æŸ ==================================
+[2020-06-18 16:10:15] INFO [<module>: run_all.py, 8] ================================== æµ‹è¯•å¼€å§‹ ==================================
+[2020-06-18 17:31:26] INFO [<module>: run_all.py, 8] ================================== æµ‹è¯•å¼€å§‹ ==================================
+[2020-06-18 18:37:54] INFO [send_email: send_email.py, 50] é‚®ä»¶å‘é€å®Œæˆï¼
+[2020-06-18 18:37:54] INFO [<module>: run_all.py, 16] ================================== æµ‹è¯•ç»“æŸ ==================================
+[2020-06-18 19:34:23] INFO [<module>: run_all.py, 8] ================================== æµ‹è¯•å¼€å§‹ ==================================
+[2020-06-18 20:35:51] INFO [send_email: send_email.py, 50] é‚®ä»¶å‘é€å®Œæˆï¼
+[2020-06-18 20:35:51] INFO [<module>: run_all.py, 16] ================================== æµ‹è¯•ç»“æŸ ==================================
+[2020-06-19 10:43:58] INFO [<module>: run_all.py, 8] ================================== æµ‹è¯•å¼€å§‹ ==================================
+[2020-06-19 11:45:26] INFO [send_email: send_email.py, 50] é‚®ä»¶å‘é€å®Œæˆï¼
+[2020-06-19 11:45:26] INFO [<module>: run_all.py, 16] ================================== æµ‹è¯•ç»“æŸ ==================================
