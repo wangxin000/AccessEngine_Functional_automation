@@ -28,9 +28,9 @@ db_passwd = 'introcks1234'
 db = 'ifaas_basicinfo'
 
 # 邮件配置
-smtp_server = 'imap.exmail.qq.com'
-smtp_user = 'wang.xin@intellif.com'
-smtp_password = 'Admin_888'
+smtp_server = 'smtp.sina.com'
+smtp_user = 'test_auto@sina.com'
+smtp_password = '5dad349dfdd6d58a'
 
 sender = smtp_user  # 发件人
 #receiver = 'wang.xin@intellif.com'  # 收件人
